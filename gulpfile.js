@@ -1,68 +1,63 @@
 "use strict";
 
-var gulp = require("gulp"),
+var gulp = require("gulp");
+var less = require("gulp-less");
+var plumber = require("gulp-plumber");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var server = require("browser-sync").create();
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
+var del = require("del");
+var imagemin = require("gulp-imagemin");
+var uglify = require("gulp-uglify");
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
+var run = require("run-sequence");
+var mqpacker = require("css-mqpacker");
 
-    server = require("browser-sync"),
-    rename = require("gulp-rename"),
-    run = require("run-sequence"),
-    del = require("del"),
+gulp.task("build", function(fn) {
+    run("clean", "copy", "style", "images", fn);
+});
 
-    sass = require("gulp-sass"),
-    plumber = require("gulp-plumber"),
-    minify = require("gulp-csso"),
-    postcss = require("gulp-postcss"),
-    autoprefixer = require("autoprefixer"),
-    mqpacker = require("css-mqpacker"),
+gulp.task("clean", function() {
+    return del("build");
+});
 
-    imagemin = require("gulp-imagemin"),
-    svgo = require('gulp-svgmin'),
+gulp.task("copy", function() {
+    return gulp.src([
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+        ], {
+            base: "."
+        })
+        .pipe(gulp.dest("build"));
+});
 
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify');
-
-gulp.task("style", function () {
-    gulp.src("sass/style.scss")
+gulp.task("style", function() {
+    gulp.src("less/style.less")
         .pipe(plumber())
-        .pipe(sass())
+        .pipe(less(
+            mqpacker({
+                sort: true
+            })
+        ))
         .pipe(postcss([
             autoprefixer({
-                browsers: [
-                    "last 1 version",
-                    "last 2 Chrome versions",
-                    "last 2 Firefox versions",
-                    "last 2 Opera versions",
-                    "last 2 Edge versions"
-                ]
+                browsers: ["last 2 versions"]
             })
         ]))
         .pipe(gulp.dest("build/css"))
+        .pipe(server.stream())
         .pipe(minify())
         .pipe(rename("style.min.css"))
-        .pipe(gulp.dest("build/css"))
-        .pipe(server.reload({stream: true}));
+        .pipe(gulp.dest("build/css"));
 });
 
-gulp.task("scripts", function () {
-    gulp.src([
-            "js/plugins/picturefill.min.js",
-            "js/common.js",
-            "js/minislider.js",
-            "js/menu.js",
-            "js/map.js",
-            "js/app.js"
-        ])
-        .pipe(concat("script.js"))
-        .pipe(gulp.dest("build/js"))
-        .pipe(rename("script.min.js"))
-        .pipe(uglify())
-        .pipe(gulp.dest("build/js"))
-        .pipe(server.reload({stream: true}));
-});
-
-gulp.task("raster", function () {
-    gulp.src([
-            "img/**/*.{png,jpg,gif}"
-        ])
+gulp.task("images", function() {
+    return gulp.src("build/img/**/*.{png,jpg,gif}")
         .pipe(imagemin([
             imagemin.optipng({
                 optimizationLevel: 3
@@ -71,60 +66,29 @@ gulp.task("raster", function () {
                 progressive: true
             })
         ]))
-        .pipe(gulp.dest("build/img"))
+        .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("vector", function () {
-    gulp.src([
-            "img/**/*.svg"
-        ])
-        .pipe(svgo())
-        .pipe(gulp.dest('build/img'));
-});
-
-gulp.task("images", function (fn) {
-    run(
-        "raster",
-        "vector",
-        fn
-    );
-});
-
-gulp.task("serve", function () {
+gulp.task("serve", function() {
     server.init({
-        server: "build",
-        notify: true,
+        server: "build/",
+        notify: false,
         open: true,
+        cors: true,
         ui: false
     });
 
-    gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-    gulp.watch("js/**/*.js", ["scripts"]);
-    gulp.watch("*.html", ["copy"]);
-});
+    gulp.task("html:copy", function() {
+        return gulp.src("*.html")
+            .pipe(gulp.dest("build"));
+    });
 
-gulp.task("copy", function () {
-    gulp.src([
-            "fonts/**/*.{woff,woff2}",
-            "*.html"
-        ], {
-            base: "."
-        })
-        .pipe(gulp.dest("build"))
-        .pipe(server.reload({stream: true}));
-});
+    gulp.task("html:update", ["html:copy"], function(done) {
+        server.reload();
+        done();
+    });
 
-gulp.task("clean", function () {
-    del("build");
-});
-
-gulp.task("build", function (fn) {
-    run(
-        "clean",
-        "copy",
-        "style",
-        "scripts",
-        "images",
-        fn
-    );
+    gulp.watch("less/**/*.less", ["style"]);
+    gulp.watch("img/*.svg").on("change", server.reload);
+    gulp.watch("*.html", ["html:update"]);
 });
