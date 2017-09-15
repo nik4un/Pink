@@ -17,7 +17,7 @@ var run = require("run-sequence");
 var mqpacker = require("css-mqpacker");
 
 gulp.task("build", function(fn) {
-    run("clean", "copy", "style", "images", fn);
+    run("clean", "copy", "style", "images", "jscript", fn);
 });
 
 gulp.task("clean", function() {
@@ -28,7 +28,6 @@ gulp.task("copy", function() {
     return gulp.src([
             "fonts/**/*.{woff,woff2}",
             "img/**",
-            "js/**",
             "*.html"
         ], {
             base: "."
@@ -69,6 +68,15 @@ gulp.task("images", function() {
         .pipe(gulp.dest("build/img"));
 });
 
+gulp.task("jscript", function () {
+  gulp.src("js/*.js")
+   .pipe(gulp.dest("build/js"))
+   .pipe(server.stream())
+   .pipe(uglify())
+   .pipe(rename({suffix: ".min"}))
+   .pipe(gulp.dest("build/js"));
+});
+
 gulp.task("serve", function() {
     server.init({
         server: "build/",
@@ -90,6 +98,8 @@ gulp.task("serve", function() {
 
     gulp.watch("less/**/*.less", ["style"]);
     gulp.watch("build/css/*.css", ["html:update"]);
+    gulp.watch("js/*.js", ["style"]);
+    gulp.watch("build/js/*.js", ["html:update"]);
     gulp.watch("img/*.svg").on("change", server.reload);
     gulp.watch("*.html", ["html:update"]);
 });
