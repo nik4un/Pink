@@ -17,7 +17,7 @@ var run = require("run-sequence");
 var mqpacker = require("css-mqpacker");
 
 gulp.task("build", function(fn) {
-    run("clean", "copy", "style", "images", "jscript", fn);
+    run("clean", "copy", "style", "images", "jscript", "pixel-glass", fn);
 });
 
 gulp.task("clean", function() {
@@ -77,6 +77,16 @@ gulp.task("jscript", function () {
    .pipe(gulp.dest("build/js"));
 });
 
+gulp.task("pixel-glass", function() {
+    return gulp.src([
+            "node_modules/pixel-glass/*.js",
+            "node_modules/pixel-glass/*.css"
+        ], {
+            base: "."
+        })
+        .pipe(gulp.dest("build"));
+});
+
 gulp.task("serve", function() {
     server.init({
         server: "build/",
@@ -98,7 +108,7 @@ gulp.task("serve", function() {
 
     gulp.watch("less/**/*.less", ["style"]);
     gulp.watch("build/css/*.css", ["html:update"]);
-    gulp.watch("js/*.js", ["style"]);
+    gulp.watch("js/*.js", ["jscript"]);
     gulp.watch("build/js/*.js", ["html:update"]);
     gulp.watch("img/*.svg").on("change", server.reload);
     gulp.watch("*.html", ["html:update"]);

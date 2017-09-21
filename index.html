@@ -11,27 +11,29 @@
   <style>
     HTML {
       background-repeat: no-repeat;
-      background-position:  50% 0;
+      background-position: 50% 0;
       /* Mobile layout by default */
-      background-image: url( "img/design/Pink-index-320m.png" );
+      background-image: url("./img/pixel-glass/Pink-index-320.png");
     }
+
     /* Tablet */
-    @media ( min-width: 660px ) {
+    @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
-        background-image: url( "img/design/Pink-index-660m.png" );
+        background-image: url("./img/pixel-glass/Pink-index-660.png");
       }
     }
+
     /* Desktop */
-    @media ( min-width: 960px ) {
+    @media ( min-width: 960px) {
       HTML {
         /* Desktop layout */
-        background-image: url( "img/design/Pink-index-960.png" );
+        background-image: url("./img/pixel-glass/Pink-index-960.png");
       }
     }
   </style>
-  <link href="css/styles_pg.css" rel="stylesheet">
-  <script src="js/script_pg.js"></script>
+  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="../node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
 </head>
 
@@ -79,20 +81,40 @@
   </header>
 
   <main class="main-directory">
-    <section class="downloas">
-      <div class="downloas__inner">
-        <h2>Взгляните на жизнь иначе!</h2>
-        <a class="downloas__downloa-btn" href="https://itunes.apple.com" target="_blank" title="Скачать на iTunes">Скачать приложение</a>
-        <div class="downloas__apps">
-          <a class="downloas__app downloas__app_apple" href="https://itunes.apple.com" target="_blank" title="Скачать для iPhone и iPad"></a>
-          <a class="downloas__app downloas__app_android" href="https://play.google.com" target="_blank" title="Скачать для Android"></a>
-          <a class="downloas__app downloas__app_windows" href="https://www.microsoft.com/store/" target="_blank" title="Скачать для Windows Phone"></a>
-        </div>
-        <div class="downloas__description">
-          Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X,&nbsp;Windows&nbsp;8
-        </div>
+    <header class="intro intro_short">
+      <div class="intro__inner">
+        <section class="downloas">
+          <div class="downloas__slogan-wrap">
+            <h2 class="downloas__slogan">Взгляните на&nbsp;жизнь иначе!</h2>
+          </div>
+          <div class="downloas__box">
+            <svg style="display:none"><symbol id="logo-android" viewBox="0 0 42.084 47.041"><path fill="#A4C639" d="M34.144 14.009H7.945c-.009.11-.018.22-.018.333v18.755c0 1.926 1.457 3.49 3.316 3.627v7.43a2.884 2.884 0 1 0 5.77 0v-7.42h8.058v7.42a2.884 2.884 0 0 0 2.885 2.885 2.884 2.884 0 0 0 2.886-2.885V36.72c1.858-.137 3.315-1.701 3.315-3.627V14.342c0-.113-.004-.223-.013-.333zM2.886 15.679a2.886 2.886 0 0 1 2.886 2.885v12.378a2.885 2.885 0 1 1-5.772 0V18.564a2.885 2.885 0 0 1 2.886-2.885zM39.198 15.679a2.885 2.885 0 0 1 2.886 2.885v12.378a2.885 2.885 0 0 1-2.886 2.886 2.884 2.884 0 0 1-2.885-2.886V18.564a2.884 2.884 0 0 1 2.885-2.885zM8.03 11.967h26.026c-.039-2.783-1.234-5.322-3.187-7.275L33.315.457a.304.304 0 1 0-.527-.304L30.416 4.26c-2.052-1.853-6.249-3.4-9.374-3.4-3.016 0-7.322 1.547-9.374 3.4L9.296.152a.304.304 0 0 0-.526.304l2.445 4.235c-1.95 1.954-3.147 4.493-3.185 7.276zm17.293-5.163c-.002-.805.664-1.46 1.488-1.462.826-.002 1.494.648 1.498 1.454v.008c.002.805-.664 1.46-1.49 1.462-.823.002-1.493-.649-1.496-1.454v-.008zm-11.143 0c-.001-.805.665-1.46 1.489-1.462.824-.002 1.494.648 1.497 1.454v.008c.002.805-.664 1.46-1.488 1.462-.825.002-1.495-.649-1.498-1.454v-.008z"/></symbol><symbol id="logo-apple" viewBox="0 0 46.21 56.753"><path fill="#FFF" d="M38.593 30.15c.081 8.59 7.535 11.447 7.617 11.483-.062.202-1.19 4.073-3.927 8.072-2.365 3.457-4.82 6.901-8.688 6.973-3.799.07-5.021-2.253-9.365-2.253s-5.702 2.182-9.298 2.32c-3.733.142-6.576-3.739-8.961-7.184-4.875-7.046-8.598-19.91-3.597-28.593 2.484-4.313 6.925-7.043 11.743-7.114 3.666-.069 7.126 2.466 9.366 2.466 2.241 0 6.444-3.049 10.865-2.601 1.85.077 7.044.747 10.38 5.629-.269.171-6.197 3.623-6.135 10.802m-7.14-21.088c1.982-2.4 3.316-5.739 2.952-9.062-2.857.115-6.312 1.904-8.36 4.302-1.837 2.123-3.445 5.521-3.011 8.778 3.184.246 6.436-1.619 8.419-4.018"/></symbol><symbol id="logo-microsoft" viewBox="0 0 43.922 41.992"><path fill="#F05423" d="M20.874 19.953H0V0h20.874v19.953z"/><path fill="#84C441" d="M43.922 19.953H23.049V0h20.873v19.953z"/><path fill="#2DABE2" d="M20.873 41.992H0V22.04h20.873v19.952z"/><path fill="#F9BC15" d="M43.922 41.992H23.049V22.04h20.873v19.952z"/></symbol></svg>
+
+            <a class="downloas__download-btn btn" href="https://itunes.apple.com" target="_blank" title="Скачать на iTunes">Скачать приложение</a>
+            <div class="downloas__apps">
+              <a class="downloas__app downloas__app_apple" href="https://itunes.apple.com" target="_blank" title="Скачать для iPhone и iPad">
+                  <svg width="45" height="60">
+                    <use xlink:href='#logo-apple'/>
+                  </svg>
+                </a>
+              <a class="downloas__app downloas__app_android" href="https://play.google.com" target="_blank" title="Скачать для Android">
+                  <svg width="42" height="55">
+                    <use xlink:href='#logo-android'/>
+                  </svg>
+                </a>
+              <a class="downloas__app downloas__app_windows" href="https://www.microsoft.com/store/" target="_blank" title="Скачать для Windows Phone">
+                  <svg width="44" height="53">
+                    <use xlink:href='#logo-microsoft'/>
+                  </svg>
+                </a>
+            </div>
+            <div class="downloas__description">
+              Доступно для iPhone, iPad, Android, Windows&nbsp;Phone, OS&nbsp;X,&nbsp;Windows&nbsp;8
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
+    </header>
 
     <section class="feature">
       <div class="feature__title">
@@ -110,10 +132,10 @@
 
     <section class="advantage">
       <div class="advantage__timer">
-        <svg class="advantage__timer-icon"     xmlns="http://www.w3.org/2000/svg" width="298" height="345.097" viewBox="0 0 298 345.097">
+        <svg class="advantage__timer-icon" xmlns="http://www.w3.org/2000/svg" width="298" height="345.097" viewBox="0 0 298 345.097">
                 <path fill="#dedede" d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z"/>
                 <path fill="#d22856" d="M149,69.048c-69.864,0-126.5,56.636-126.5,126.5c0,69.864,56.636,126.5,126.5,126.5 s126.5-56.636,126.5-126.5C275.5,125.685,218.864,69.048,149,69.048z M149,306.264c-60.844,0-110.167-49.323-110.167-110.167 C38.833,135.253,88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167C259.167,256.941,209.843,306.264,149,306.264z"/>
-        </svg
+        </svg>
       </div>
       <div class="advantage__lead">
         <h3 class="advantage__lead-heading">Эффект на&nbsp;24&nbsp;часа!</h3>
@@ -143,7 +165,7 @@
         <span class="feedback__pagination-item"></span>
       </div>
     </section>
-
+<!--
     <section class="price">
       <h2 class="price__title" sr-only>Лицензи и цены</h2>
       <div class="price__wrapper">
@@ -227,7 +249,7 @@
         <span class="price__pagination-item price__pagination-item_active"></span>
         <span class="price__pagination-item"></span>
       </div>
-    </section>
+    </section> -->
 
     <section class="contacts">
       <div class="contacts__title">
@@ -270,36 +292,36 @@
             </g>
           </svg>
         </a>
-      <div class="social">
-        <a class="social__link" href="" target="_blank">
+        <div class="social">
+          <a class="social__link" href="" target="_blank">
           <svg class="social__icon-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.5 14.663" width="18" height="15">
             <path d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
           </svg>
         </a>
-        <a class="social__link" href="" target="_blank">
+          <a class="social__link" href="" target="_blank">
           <svg class="social__icon-facebook" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.673 18.944" width="9" height="19">
             <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
           </svg>
         </a>
-        <a class="social__link" href="" target="_blank">
+          <a class="social__link" href="" target="_blank">
           <svg class="social__icon-youtube" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.64 13.96" width="15" height="14">
             <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
           </svg>
         </a>
+        </div>
       </div>
-    </div>
-    <div class="copyright">
-      <span class="copyright__text">Разработано</span>
-      <a class="copyright__owner" href="https://htmlacademy.ru" target="_blank">
+      <div class="copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__owner" href="https://htmlacademy.ru" target="_blank">
         HTML Academy
         <svg class="copyright__icon-academy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.943 34.09" width="27" height="34">
               <path d="M13.62.017L13.472 0 0 1.412v24.66l13.472 8.018 13.43-7.99.042-.026V1.412L13.62.017zm11.4 12.11L13.494 5.334V5.23l-.088.05-.088-.056v.11L1.924 12.117v-8.97l11.547-1.213L25.02 3.147v8.98zm-11.615-5.34L24.923 13.5l-4.48 2.64-7.092-4.22-.012 1.414 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.032-1.787-.012 1.413 1.852 1.092-1.8 1.08-11.356-6.75 11.37-6.835zm-11.48 8.34l11.41 6.79.016 1.045-7.94-4.728-.015 1.416 7.98 4.796.016 1.076-7.97-4.74-.014 1.414 8.02 4.82.046.027 8.143-4.872v-1.267l-.01-.148v-3.76l3.414-2.037v10.02L13.47 31.85 1.925 24.98v-9.853z"/>
             </svg>
       </a>
-    </div>
-  </footer>
+      </div>
+      </footer>
 
-  <script type="text/javascript" src="js/script.min.js"></script>
+      <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 
 </html>

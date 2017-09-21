@@ -1,13 +1,13 @@
 var navMain = document.querySelector(".main-nav");
 var navSwitch = document.querySelector(".main-nav__trigger");
 var pageHeader = document.querySelector(".page-header");
-// var pageIntro = document.querySelector(".intro");
+var pageIntro = document.querySelector(".intro");
 
 navMain.classList.remove("main-nav_opened");
 navMain.classList.add("main-nav_closed");
 navMain.classList.remove("main-nav_nojs");
 pageHeader.classList.remove("page-header_full");
-// pageIntro.classList.remove("intro_short");
+pageIntro.classList.remove("intro_short"); 
 
 navSwitch.addEventListener("click", function() {
   if (navMain.classList.contains("main-nav_closed")) {
@@ -18,16 +18,16 @@ navSwitch.addEventListener("click", function() {
     } else {
       pageHeader.classList.add("page-header_full");
     };
-    // if (pageIntro.classList.contains("intro_short")) {
-    //   pageIntro.classList.remove("intro_short");
-    // } else {
-    //   pageIntro.classList.add("intro_short");
-    // };
+    if (pageIntro.classList.contains("intro_short")) {
+      pageIntro.classList.remove("intro_short");
+    } else {
+      pageIntro.classList.add("intro_short");
+    };
   } else {
     navMain.classList.add("main-nav_closed");
-    navMain.classList.remove("main-nav_opened");    
+    navMain.classList.remove("main-nav_opened");
     pageHeader.classList.remove("page-header_full");
-    // pageIntro.classList.remove("intro_short");
+    pageIntro.classList.remove("intro_short");
   }
 });
 //
