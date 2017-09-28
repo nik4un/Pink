@@ -1,20 +1,20 @@
 "use strict";
 
-var gulp = require("gulp");
-var less = require("gulp-less");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var minify = require("gulp-csso");
-var rename = require("gulp-rename");
-var del = require("del");
-var imagemin = require("gulp-imagemin");
-var uglify = require("gulp-uglify");
-var svgstore = require("gulp-svgstore");
-var svgmin = require("gulp-svgmin");
-var run = require("run-sequence");
-var mqpacker = require("css-mqpacker");
+const gulp = require("gulp");
+const less = require("gulp-less");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const server = require("browser-sync").create();
+const minify = require("gulp-csso");
+const rename = require("gulp-rename");
+const del = require("del");
+const imagemin = require("gulp-imagemin");
+const uglify = require("gulp-uglify");
+const svgstore = require("gulp-svgstore");
+const svgmin = require("gulp-svgmin");
+const run = require("run-sequence");
+const mqpacker = require("css-mqpacker");
 
 gulp.task("build", function(fn) {
     run("clean", "copy", "style", "images", "jscript", "pixel-glass", fn);
