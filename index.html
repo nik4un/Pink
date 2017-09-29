@@ -12,6 +12,7 @@
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
+      
       /* Mobile layout by default */
       background-image: url("./img/pixel-glass/Pink-index-320.png");
     }
@@ -161,27 +162,38 @@
 
     <section class="feedback">
       <h2 class="feedback__title sr-only">Отзывы пользователей</h2>
-      <div class="feedback__iteme">
-        <blockquote class="feedback__content">
-          Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!
-        </blockquote>
-        <div class="feedback__author">
+      <div class="feedback__list">
+        <div class="feedback__item">
+          <div class="feedback__content">
+            «Это приложение перевернуло мой мир и&nbsp;позволило по-новому взглянуть на привычные серые вещи! А еще я&nbsp;познакомился со своей будущей женой в&nbsp;комментариях к выложенной фотографии!»
+          </div>
           <h4 class="feedback__autor-name">Николай Петров</h4>
           <p class="feedback__autor-about">25 лет, водитель трамвая</p>
         </div>
+        <!-- <div class="feedback__item">
+        <div class="feedback__content">
+          «При регулярном использовании этого приложения вы заметите, как ваша кожа становится мягче, эластичнее и бархатистее. Ручки будут защищены невидимым барьеромот влияния окружающей среды.»
+        </div>
+          <h4 class="feedback__autor-name">Роза Люксембург</h4>
+          <p class="feedback__autor-about">34 года, публицист</p>
       </div>
-      <button class="feedback__nav feedback__nav_1" type="button" title="Первый"></button>
-      <button class="feedback__nav feedback__nav_2" type="button" title="Второй"></button>
-      <button class="feedback__nav feedback__nav_3" type="button" title="Третий"></button>
-      <div class="feedback__pagination pagination">
-        <span class="feedback__pagination-item"></span>
-        <span class="feedback__pagination-item feedback__pagination-item_active"></span>
-        <span class="feedback__pagination-item"></span>
+      <div class="feedback__item">
+        <div class="feedback__content">
+          «Моя жизнь была довольно стандартна и сера, по знакомой многим системе «работа-дом, дом–работа», пока не появились это приложение! Сначала может быть немного непривычно, но втянетесь очень быстро!»
+        </div>
+          <h4 class="feedback__autor-name">Инесса Арманд</h4>
+          <p class="feedback__autor-about">32 года, бухгалтер</p>
+      </div> -->
+        <button class="feedback__nav feedback__nav_previous" type="button" title="Предыдущий"></button>
+        <button class="feedback__nav feedback__nav_next" type="button" title="Следующий"></button>
+      </div>
+      <div class="pagination feedback__pagination">
+        <span class="pagination__item pagination__item_active"></span><span class="pagination__item"></span><span class="pagination__item"></span>
       </div>
     </section>
-<!--
+
     <section class="price">
-      <h2 class="price__title" sr-only>Лицензи и цены</h2>
+      <h2 class="price__title sr-only">Лицензи и цены</h2>
       <div class="price__wrapper">
         <div class="price__inner">
           <table class="price__table">
@@ -263,7 +275,7 @@
         <span class="price__pagination-item price__pagination-item_active"></span>
         <span class="price__pagination-item"></span>
       </div>
-    </section> -->
+    </section>
 
     <section class="contacts">
       <div class="contacts__title">

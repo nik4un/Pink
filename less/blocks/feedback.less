@@ -1,0 +1,160 @@
+.feedback {
+  padding-top: 85px;
+
+  @media (min-width: @tablets) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: @desktop) {
+    position: relative;
+
+    padding-top: 185px;
+
+    &::before {
+      position: absolute;
+      top: 72px;
+      left: 50%;
+
+      width: 80px;
+      height: 65px;
+
+      content: '';
+      transform: translateX(-50%);
+
+      background-image: url("../img/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 78px auto;
+    }
+  }
+}
+
+.feedback__list {
+  position: relative;
+
+  width: 300px;
+  margin-bottom: 27px;
+
+  text-align: center;
+
+  .container();
+  .center-block();
+
+  @media (min-width: @tablets) {
+    margin-bottom: 30px;
+  }
+}
+
+.feedback__content {
+  margin-bottom: 3px;
+
+  font-size: 14px;
+  line-height: 30px;
+
+  @media (min-width: @tablets) {
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    padding-right: 120px;
+    padding-left: 120px;
+  }
+}
+
+.feedback__autor-name {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+
+  margin: 0;
+
+  font-size: 18px;
+
+  @media (min-width: @tablets) {
+    position: static;
+
+    margin-bottom: 5px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  @media (min-width: @desktop) {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+.feedback__autor-about {
+  display: none;
+
+  @media (min-width: @tablets) {
+    display: block;
+
+    margin: 0 0 6px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 52px;
+
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+.feedback__nav {
+  display: none;
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    top: 27px;
+
+    display: block;
+
+    width: 23px;
+    height: 42px;
+
+    cursor: pointer;
+
+    opacity: 0.3;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/icon-review-arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 46px auto;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    &_previous {
+      left: 10px;
+
+      background-position: top left;
+    }
+
+    &_next {
+      right: 10px;
+
+      background-position: top right;
+    }
+  }
+}
+
+.feedback__pagination {
+  margin-bottom: 30px;
+  
+  @media (min-width: @tablets) {
+    margin-bottom: 10px;
+  }
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
