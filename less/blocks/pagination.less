@@ -49,6 +49,9 @@
 
   &_active::before {
     border: 3px solid @menu-color;
-    background-color: fade(@menu-color, 10%);
+    background-color: transparent;
+  }
+  &_active:hover::before {
+    background-color: transparent;
   }
 }

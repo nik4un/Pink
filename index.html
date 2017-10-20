@@ -12,7 +12,7 @@
     HTML {
       background-repeat: no-repeat;
       background-position: 50% 0;
-      
+
       /* Mobile layout by default */
       background-image: url("./img/pixel-glass/Pink-index-320.png");
     }
@@ -194,18 +194,17 @@
 
     <section class="price">
       <h2 class="price__title sr-only">Лицензи и цены</h2>
-      <div class="price__wrapper">
         <div class="price__inner">
           <table class="price__table">
             <tr class="price__table-header">
-              <th class="price__option-header">
+              <td class="price__option-header">
                 <span class="sr-only">Опции</span>
-              </th>
+              </td>
               <th class="price__header">
                 <div class="price__name">База</div>
                 <div class="price__cost">1,99 USD</div>
               </th>
-              <th class="price__header">
+              <th class="price__header price__header_flag">
                 <div class="price__name">Стандарт</div>
                 <div class="price__cost">3,99 USD</div>
                 <div class="price__flag">Хит</div>
@@ -216,71 +215,68 @@
               </th>
             </tr>
             <tr>
-              <td class="price__item price__item_option-name">
+              <td class="price__item price__item_option-title">
                 <span class="price__option">Розовый фильтр</span>
               </td>
               <td class="price__item">
-                <span class="price__option price__option_name">Розовый фильтр</span>
+                <span class="price__option price__option_option-title">Розовый фильтр</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Розовый фильтр</span>
+                <span class="price__option price__option_option-title">Розовый фильтр</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Розовый фильтр</span>
+                <span class="price__option price__option_option-title">Розовый фильтр</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
             </tr>
             <tr>
-              <td class="price__item price__item_option-name">
+              <td class="price__item price__item_option-title">
                 <span class="price__option">Смайлики</span>
               </td>
               <td class="price__item">
-                <span class="price__option price__option_name">Смайлики</span>
+                <span class="price__option price__option_option-title">Смайлики</span>
                 <span class="price__option-status price__option-status_off">Не включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Смайлики</span>
+                <span class="price__option price__option_option-title">Смайлики</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Смайлики</span>
+                <span class="price__option price__option_option-title">Смайлики</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
             </tr>
             <tr>
-              <td class="price__item price__item_option-name">
+              <td class="price__item price__item_option-title">
                 <span class="price__option">Комментарии</span>
               </td>
               <td class="price__item">
-                <span class="price__option price__option_name">Комментарии</span>
+                <span class="price__option price__option_option-title">Комментарии</span>
                 <span class="price__option-status price__option-status_off">Не включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Комментарии</span>
+                <span class="price__option price__option_option-title">Комментарии</span>
                 <span class="price__option-status price__option-status_off">Не включено</span>
               </td>
               <td class="price__item">
-                <span class="price__option">Комментарии</span>
+                <span class="price__option price__option_option-title">Комментарии</span>
                 <span class="price__option-status price__option-status_on">Включено</span>
               </td>
             </tr>
             </tr>
           </table>
         </div>
-      </div>
-      <div class="price__pagination pagination">
-        <span class="price__pagination-item"></span>
-        <span class="price__pagination-item price__pagination-item_active"></span>
-        <span class="price__pagination-item"></span>
+      <div class="pagination price__pagination">
+        <span class="pagination__item"></span><span class="pagination__item pagination__item_active"></span><span class="pagination__item"></span>
       </div>
     </section>
 
     <section class="contacts">
-      <div class="contacts__title">
+      <!-- <div class="contacts__title"> -->
         <h2 class="contacts__headline">Остались вопросы?<br>Свяжитесь с нами!</h3>
-      </div>
+      <!-- </div> -->
       <div class="contacts__items">
         <div class="contacts__item contacts__item_phone">
           <h4 class="contacts__item-headline">Звоните:</h4>
@@ -292,7 +288,7 @@
         </div>
         <div class="contacts__item contacts__item_address">
           <h4 class="contacts__item-headline">Приезжайте в гости:</h4>
-          <address class="contacts__item-info">ул. Большая Конюшенная, 19/8</address>
+          <address class="contacts__item-info">ул. Большая<br>Конюшенная,19/8</address>
         </div>
       </div>
       <div class="contacts__map">
