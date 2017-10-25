@@ -16,6 +16,8 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 30px;
+  color: @dark-txt;
+
   @media (min-width: @tablets) {
     margin-bottom: 45px;
 
@@ -86,6 +88,7 @@
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
+  color: @dark-txt;
   @media (min-width: @tablets) {
     margin-bottom: 10px;
   }
@@ -102,6 +105,12 @@
   font-size: 24px;
   font-weight: 300;
   line-height: 28px;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: @black-color;
+    text-decoration: underline;
+  }
 }
 
 .contacts__map {
@@ -181,7 +190,7 @@
 
       background-size: 100% 70px;
     }
-    
+
     @media (min-width: @desktop) {
       height: 101px;
 
