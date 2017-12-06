@@ -1,0 +1,77 @@
+.post {
+  .edge(red);
+}
+
+.post__panorama-image {
+  .edge(blue);
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  @media (max-width: @phones-max) {
+    width: 320px;
+    }
+  @media (min-width: @tablets) {
+    height: 509px;
+  }
+
+  @media (min-width: @desktop) {
+    height: 506px;
+  }
+}
+
+.post__panorama-image img {
+  .edge(#e117e6);
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+.post__panorama-rubric {
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  left: 50%;
+  top: 0px;
+  background-color: @pink-color;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: @white-color;
+  font-size: 12px;
+  @media (min-width: @tablets) {
+    top: 57px;
+    transform: translateX(170px);
+  }
+
+  @media (min-width: @desktop) {
+    top: 54px;
+    transform: translateX(330px);
+  }
+}
+
+.post__gallary {
+  .edge(blue);
+  .container();
+  .center-block();
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.post_card {
+
+}
+
+.post__body {
+  .edge(#9309ff);
+  background-color: @light-fon;
+  .container();
+  .center-block();
+  padding-left: 20px;
+  padding-right: 20px;
+}

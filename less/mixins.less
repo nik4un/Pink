@@ -31,3 +31,13 @@
   padding: 0px;
   border: 0px;
 }
+
+.reset-child-margins() {
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}

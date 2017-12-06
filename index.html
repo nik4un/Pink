@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pink</title>
+  <link rel="stylesheet" href="css/style.min.css">
   <!-- Pixel Glass -->
   <style>
     HTML {
@@ -16,16 +16,16 @@
       /* Mobile layout by default */
       background-image: url("./img/pixel-glass/Pink-index-320.png");
     }
-
     /* Tablet */
+
     @media ( min-width: 660px) {
       HTML {
         /* Tablet layout */
         background-image: url("./img/pixel-glass/Pink-index-660.png");
       }
     }
-
     /* Desktop */
+
     @media ( min-width: 960px) {
       HTML {
         /* Desktop layout */
@@ -33,8 +33,8 @@
       }
     }
   </style>
-  <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-  <script src="../node_modules/pixel-glass/script.js"></script>
+  <link href="./node_modules/pixel-glass/styles.css" rel="stylesheet">
+  <script src="./node_modules/pixel-glass/script.js"></script>
   <!-- // Pixel Glass -->
 </head>
 
@@ -83,7 +83,7 @@
 
   <main class="main-directory">
     <header class="intro intro_short">
-      <div class="intro__inner">
+      <div class="intro__inner intro__inner_primary">
         <section class="downloas">
           <div class="downloas__slogan-wrap">
             <h2 class="downloas__slogan">Взгляните на&nbsp;жизнь иначе!</h2>
@@ -194,80 +194,80 @@
 
     <section class="price">
       <h2 class="price__title sr-only">Лицензи и цены</h2>
-        <div class="price__inner">
-          <table class="price__table">
-            <tr class="price__table-header">
-              <td class="price__option-header">
-                <span class="sr-only">Опции</span>
-              </td>
-              <th class="price__header">
-                <div class="price__name">База</div>
-                <div class="price__cost">1,99 USD</div>
-              </th>
-              <th class="price__header price__header_flag">
-                <div class="price__name">Стандарт</div>
-                <div class="price__cost">3,99 USD</div>
-                <div class="price__flag">Хит</div>
-              </th>
-              <th class="price__header">
-                <div class="price__name">Анлим</div>
-                <div class="price__cost">9,99 USD</div>
-              </th>
-            </tr>
-            <tr>
-              <td class="price__item price__item_option-title">
-                <span class="price__option">Розовый фильтр</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Розовый фильтр</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Розовый фильтр</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Розовый фильтр</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="price__item price__item_option-title">
-                <span class="price__option">Смайлики</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Смайлики</span>
-                <span class="price__option-status price__option-status_off">Не включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Смайлики</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Смайлики</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-            </tr>
-            <tr>
-              <td class="price__item price__item_option-title">
-                <span class="price__option">Комментарии</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Комментарии</span>
-                <span class="price__option-status price__option-status_off">Не включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Комментарии</span>
-                <span class="price__option-status price__option-status_off">Не включено</span>
-              </td>
-              <td class="price__item">
-                <span class="price__option price__option_option-title">Комментарии</span>
-                <span class="price__option-status price__option-status_on">Включено</span>
-              </td>
-            </tr>
-            </tr>
-          </table>
-        </div>
+      <div class="price__inner">
+        <table class="price__table">
+          <tr class="price__table-header">
+            <td class="price__option-header">
+              <span class="sr-only">Опции</span>
+            </td>
+            <th class="price__header">
+              <div class="price__name">База</div>
+              <div class="price__cost">1,99 USD</div>
+            </th>
+            <th class="price__header price__header_flag">
+              <div class="price__name">Стандарт</div>
+              <div class="price__cost">3,99 USD</div>
+              <div class="price__flag">Хит</div>
+            </th>
+            <th class="price__header">
+              <div class="price__name">Анлим</div>
+              <div class="price__cost">9,99 USD</div>
+            </th>
+          </tr>
+          <tr>
+            <td class="price__item price__item_option-title">
+              <span class="price__option">Розовый фильтр</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Розовый фильтр</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Розовый фильтр</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Розовый фильтр</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="price__item price__item_option-title">
+              <span class="price__option">Смайлики</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Смайлики</span>
+              <span class="price__option-status price__option-status_off">Не включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Смайлики</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Смайлики</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+          </tr>
+          <tr>
+            <td class="price__item price__item_option-title">
+              <span class="price__option">Комментарии</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Комментарии</span>
+              <span class="price__option-status price__option-status_off">Не включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Комментарии</span>
+              <span class="price__option-status price__option-status_off">Не включено</span>
+            </td>
+            <td class="price__item">
+              <span class="price__option price__option_option-title">Комментарии</span>
+              <span class="price__option-status price__option-status_on">Включено</span>
+            </td>
+          </tr>
+          </tr>
+        </table>
+      </div>
       <div class="pagination price__pagination">
         <span class="pagination__item"></span><span class="pagination__item pagination__item_active"></span><span class="pagination__item"></span>
       </div>
@@ -275,7 +275,7 @@
 
     <section class="contacts">
       <!-- <div class="contacts__title"> -->
-        <h2 class="contacts__headline">Остались вопросы?<br>Свяжитесь с нами!</h3>
+      <h2 class="contacts__headline">Остались вопросы?<br>Свяжитесь с нами!</h3>
       <!-- </div> -->
       <div class="contacts__items">
         <div class="contacts__item contacts__item_phone">
@@ -353,11 +353,9 @@
         </a>
         </div>
       </div>
-
-      </div>
-      </footer>
-      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-      <script type="text/javascript" src="js/script.min.js"></script>
+  </footer>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script type="text/javascript" src="js/script.min.js"></script>
 </body>
 
 </html>
