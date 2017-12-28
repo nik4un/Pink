@@ -1,14 +1,16 @@
 .post {
-  .edge(red);
+  // .edge(red);
 }
 
 .post__panorama-image {
-  .edge(blue);
-  display: block;
   position: relative;
+  // .edge(blue);
+
+  display: block;
   overflow: hidden;
-  margin: 0 auto;
+
   max-width: 1200px;
+  margin: 0 auto;
 
   @media (max-width: @phones-max) {
     width: 320px;
@@ -23,55 +25,225 @@
 }
 
 .post__panorama-image img {
-  .edge(#e117e6);
-  display: block;
   position: relative;
   left: 50%;
+  // .edge(#e117e6);
+
+  display: block;
+
+  max-width: inherit;
+
   transform: translateX(-50%);
-  width: auto;
 }
 
 .post__panorama-rubric {
   position: absolute;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  left: 50%;
   top: 0px;
-  background-color: @pink-color;
+  left: 50%;
+
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+
   text-transform: uppercase;
-  font-weight: 700;
+
   color: @white-color;
+  background-color: @pink-color;
+
   font-size: 12px;
+  font-weight: 700;
   @media (min-width: @tablets) {
     top: 57px;
+
     transform: translateX(170px);
   }
 
   @media (min-width: @desktop) {
     top: 54px;
+
     transform: translateX(330px);
   }
 }
 
 .post__gallary {
-  .edge(blue);
-  .container();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 280px;
+  // .edge(#ffbf00);
+
   .center-block();
-  padding-left: 20px;
-  padding-right: 20px;
+  @media (min-width: @tablets) {
+    width: 620px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 940px;
+  }
 }
 
 .post_card {
+  // .edge(#00f7ff);
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  margin-bottom: 20px;
+  @media (min-width: @tablets) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 54px;
+  }
+}
+
+.post__card-image img{
+  display: block;
+
+  @media (min-width: @tablets) {
+    position: relative;
+    left: 50%;
+
+    width: auto;
+    max-width: inherit;
+    height: 300Px;
+
+    transform: translateX(-50%);
+  }
+  @media (min-width: @desktop) {
+    height: 400px;
+  }
+}
+.post__body {
+  // .edge(#9309ff);
+  display: flex;
+  flex-direction: column;
+  // align-items: justify;
+  flex-grow: 1;
+  // .center-block();
+
+  width: 280px;
+  // position: relative;
+  padding-top: 18px;
+  padding-right: 18px;
+  padding-bottom: 27px;
+  padding-left: 18px;
+
+  background-color: @light-fon;
+
+  @media (min-width: @tablets) {
+    width: 300px;
+    padding-top: 24px;
+    padding-right: 30px;
+    padding-left: 28px;
+    // padding-bottom: 29px;
+  }
+
+  &_panorama {
+    width: 280px;
+    margin-bottom: 19px;
+
+    @media (min-width: @tablets) {
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      width: 620px;
+      margin-bottom: 50px;
+      padding-right: 28px;
+      padding-bottom: 8px;
+      padding-left: 28px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 940px;
+      padding-right: 30px;
+    }
+  }
+}
+
+.post__heder {
+  // .edge(#792ef6);
+
+  @media (min-width: @tablets) {
+    flex-grow: 1;
+    order: -2;
+  }
+}
+.post__author {
+  font-weight: 700;
+  // .edge(red);
+}
+
+.post__time {
+  text-transform: uppercase;
+  // .edge(red);
+
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
 
 }
 
-.post__body {
-  .edge(#9309ff);
-  background-color: @light-fon;
-  .container();
-  .center-block();
-  padding-left: 20px;
-  padding-right: 20px;
+.post__text {
+  // .edge(blue);
+  flex-grow: 1;
+
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablets) {
+    margin-bottom: 20px;
+  }
+
+  &_panorama {
+    @media (min-width: @tablets) {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.post__action {
+  // .edge();
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablets) {
+    justify-content: space-between;
+  }
+
+  &_panorama {
+    @media (min-width: @tablets) {
+      order: -1;
+    }
+  }
+}
+
+.post__stats {
+  margin-left: 19px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: @pink-color;
+
+  font-size: 12px;
+  line-height: 12px;
+
+
+  @media (min-width: @tablets) {
+    order: -1;
+
+    margin-left: 0;
+  }
+
+  &_panorama {
+    @media (min-width: @tablets) {
+      margin-right: 17px;
+
+    }
+  }
 }
