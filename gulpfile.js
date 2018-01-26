@@ -87,7 +87,7 @@ gulp.task("pixel-glass", function() {
         .pipe(gulp.dest("build"));
 });
 
-gulp.task("serve", function() {
+gulp.task("server", function() {
     server.init({
         server: "build/",
         notify: false,
