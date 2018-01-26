@@ -1,10 +1,5 @@
-.post {
-  // .edge(red);
-}
-
 .post__panorama-image {
   position: relative;
-  // .edge(blue);
 
   display: block;
   overflow: hidden;
@@ -14,7 +9,8 @@
 
   @media (max-width: @phones-max) {
     width: 320px;
-    }
+  }
+
   @media (min-width: @tablets) {
     height: 509px;
   }
@@ -27,7 +23,6 @@
 .post__panorama-image img {
   position: relative;
   left: 50%;
-  // .edge(#e117e6);
 
   display: block;
 
@@ -53,6 +48,7 @@
 
   font-size: 12px;
   font-weight: 700;
+
   @media (min-width: @tablets) {
     top: 57px;
 
@@ -73,9 +69,9 @@
   justify-content: space-between;
 
   width: 280px;
-  // .edge(#ffbf00);
 
   .center-block();
+
   @media (min-width: @tablets) {
     width: 620px;
   }
@@ -86,12 +82,12 @@
 }
 
 .post_card {
-  // .edge(#00f7ff);
   display: flex;
   flex-direction: column;
 
   width: 280px;
   margin-bottom: 20px;
+  
   @media (min-width: @tablets) {
     width: 300px;
   }
@@ -101,7 +97,7 @@
   }
 }
 
-.post__card-image img{
+.post__card-image img {
   display: block;
 
   @media (min-width: @tablets) {
@@ -110,7 +106,7 @@
 
     width: auto;
     max-width: inherit;
-    height: 300Px;
+    height: 300px;
 
     transform: translateX(-50%);
   }
@@ -119,15 +115,11 @@
   }
 }
 .post__body {
-  // .edge(#9309ff);
   display: flex;
   flex-direction: column;
-  // align-items: justify;
   flex-grow: 1;
-  // .center-block();
 
   width: 280px;
-  // position: relative;
   padding-top: 18px;
   padding-right: 18px;
   padding-bottom: 27px;
@@ -140,12 +132,13 @@
     padding-top: 24px;
     padding-right: 30px;
     padding-left: 28px;
-    // padding-bottom: 29px;
   }
 
   &_panorama {
     width: 280px;
     margin-bottom: 19px;
+
+    .center-block();
 
     @media (min-width: @tablets) {
       flex-direction: row;
@@ -166,8 +159,6 @@
 }
 
 .post__heder {
-  // .edge(#792ef6);
-
   @media (min-width: @tablets) {
     flex-grow: 1;
     order: -2;
@@ -175,25 +166,23 @@
 }
 .post__author {
   font-weight: 700;
-  // .edge(red);
 }
 
 .post__time {
   text-transform: uppercase;
-  // .edge(red);
 
   font-size: 12px;
   font-weight: 300;
   line-height: 12px;
-
 }
 
 .post__text {
-  // .edge(blue);
   flex-grow: 1;
 
   margin: 0;
   margin-bottom: 16px;
+
+  .reset-child-margins();
 
   @media (min-width: @tablets) {
     margin-bottom: 20px;
@@ -207,7 +196,6 @@
 }
 
 .post__action {
-  // .edge();
   display: flex;
   align-items: center;
 
@@ -233,7 +221,6 @@
   font-size: 12px;
   line-height: 12px;
 
-
   @media (min-width: @tablets) {
     order: -1;
 
@@ -243,7 +230,6 @@
   &_panorama {
     @media (min-width: @tablets) {
       margin-right: 17px;
-
     }
   }
 }

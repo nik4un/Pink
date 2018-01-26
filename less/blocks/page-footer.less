@@ -1,4 +1,6 @@
 .page-footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablets) {
     display: block;
@@ -14,6 +16,10 @@
 
   &_index {
     display: none;
+
+    @media (min-width: @tablets) {
+      display: block;
+    }
   }
 
   &_page {
@@ -23,12 +29,20 @@
 
 .page-footer__wrapper {
   display: flex;
+  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
+
+  min-height: 216px;
 
   .container();
   .center-block();
 
   @media (min-width: @tablets) {
+    align-items: stretch;
+    flex-direction: row;
+
+    min-height: 0px;
     padding-right: 20px;
     padding-left: 20px;
   }
