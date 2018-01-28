@@ -1,7 +1,7 @@
 "use strict";
 
 const gulp = require("gulp");
-const less = require("gulp-less");
+const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
@@ -36,13 +36,9 @@ gulp.task("copy", function() {
 });
 
 gulp.task("style", function() {
-    gulp.src("less/style.less")
+    gulp.src("sass/style.scss")
         .pipe(plumber())
-        .pipe(less(
-            mqpacker({
-                sort: true
-            })
-        ))
+        .pipe(sass())
         .pipe(postcss([
             autoprefixer({
                 browsers: ["last 2 versions"]
