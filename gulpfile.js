@@ -17,11 +17,20 @@ const run = require("run-sequence");
 const mqpacker = require("css-mqpacker");
 
 gulp.task("build", function(fn) {
-    run("clean", "copy", "style", "images", "jscript", "pixel-glass", fn);
+    run("clean", "sprite", "copy", "style", "images", "jscript", "pixel-glass", fn);
 });
 
 gulp.task("clean", function() {
     return del("build");
+});
+
+gulp.task("sprite", function () {
+  return src('img/*.svg')
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename('sprite.svg'))
+    .pipe(dest('img'))
 });
 
 gulp.task("copy", function() {

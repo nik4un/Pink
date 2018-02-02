@@ -249,7 +249,7 @@
   &--email {
     @media (min-width: $tablets) {
       &::before {
-        background: $grey url(../img/icon-mail.svg) no-repeat center;
+        background: $grey url(../img/sprite.svg#icon-mail) no-repeat center;
         background-size: 18px 13px;
       }
     }
@@ -258,7 +258,7 @@
   &--phone {
     @media (min-width: $tablets) {
       &::before {
-        background: $grey url(../img/icon-phone.svg) no-repeat center;
+        background: $grey url(../img/sprite.svg#icon-phone) no-repeat center;
         background-size: 20px 19px;
       }
     }
@@ -434,7 +434,7 @@
   left: 9px;
   width: 22px;
   height: 16px;
-  background: url(../img/icon-check.svg) no-repeat top left;
+  background: url(../img/sprite.svg#icon-check) no-repeat top left;
   background-size: 22px 16px;
   z-index: 1;
 }
